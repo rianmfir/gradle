@@ -1,0 +1,17 @@
+task selamatsiang {
+    doLast {
+        println 'selamat, siang'
+    }
+}
+
+task selamat {
+   doLast {
+       print 'selamat, '
+    }
+}
+
+task siang(dependsOn:selamat) {
+    doLast {
+        print "siang"
+    }
+}
